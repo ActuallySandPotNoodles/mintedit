@@ -52,6 +52,19 @@ public:
         if (home_env != nullptr) {
             wherets = string(home_env) + "/.cache/mintedit-lastloc";
         }
+        if (not filesystem::exists(string(home_env) + "/.sand-platform")) {
+            int reply = QMessageBox::warning(this, "Save Changes?",
+                                             "Are you on mobile\nNote that you can change this at any time\nby changing the value in ~/.sand-setplat",
+                                             QMessageBox::Yes | QMessageBox::No);
+            bool use_mobile = (reply == QMessageBox::Yes);
+            ofstream outfile(string(home_env) + "/.sand-platform");
+            if (outfile.is_open()) {
+                int use_mobile_int = use_mobile ? 1 : 0;
+                outfile << use_mobile_int;
+                outfile.close();
+            }
+        }
+        use_mobile = checkMobilePlatform(home_env);
         cout << "last recent file stored in: " << wherets << endl;
         ui.setupUi(centralWidget);
         if (use_mobile) {
@@ -86,6 +99,21 @@ public:
         reset_fname();
         setCentralWidget(centralWidget);
     }
+    bool checkMobilePlatform(const char* home_env) {
+        string configPath = std::string(home_env) + "/.sand-platform";
+        if (!std::filesystem::exists(configPath)) {
+            return false;
+        }
+        std::ifstream infile(configPath);
+        if (infile.is_open()) {
+            int value = 0;
+            infile >> value;
+            infile.close();
+            return (value == 1);
+        }
+        return false;
+    }
+
     void showVersion() {
         QMessageBox msgBox(this);
         QPixmap apixmap("/usr/share/sandpotnoodles/sanddice.png");
