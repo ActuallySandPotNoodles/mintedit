@@ -4,7 +4,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 $ARCH = $(uname -m)
-echo "Starting Install Of 'sanddice'..."
+echo "Starting Install Of 'MintEdit'..."
 echo "Downloading Stuff..."
 mkdir -p /usr/share/sandpotnoodles
 wget https://raw.githubusercontent.com/ActuallySandPotNoodles/mintedit/refs/heads/main/mintedit.png -O /usr/share/sandpotnoodles/mintedit.png
@@ -15,5 +15,5 @@ fi
 if [[ "$(uname -m)" == "aarch64" ]]; then
 wget https://github.com/ActuallySandPotNoodles/mintedit/releases/download/1.0.0/mintedit_aarch64 -O /usr/bin/mintedit
 fi
-chmod 775 /usr/bin/sanddice
+chmod 775 /usr/bin/mintedit
 echo "Install Complete!"
