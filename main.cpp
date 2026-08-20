@@ -116,7 +116,7 @@ public:
 
     void showVersion() {
         QMessageBox msgBox(this);
-        QPixmap apixmap("/usr/share/sandpotnoodles/sanddice.png");
+        QPixmap apixmap("/usr/share/sandpotnoodles/mintedit.png");
         QPixmap pixmap = apixmap.scaled(150, 150, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         msgBox.setText(QString::fromStdString("MintEdit Version "+version+"\nMade with ｌｕｃｋ by SandPotNoodles\nContributors:\nme"));
         msgBox.setIconPixmap(pixmap);
