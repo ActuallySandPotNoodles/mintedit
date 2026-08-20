@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+
+Name=MintEdit
+Exec=/usr/bin/mintedit %f
+Icon=/usr/share/sandpotnoodles/mintedit.png
+
+Comment=Basic text editor (Wrote in C++)
+
+Categories=Utility
+Keywords=mintmix;sandpotnoodles;text;edit;files;mobile;qt6
