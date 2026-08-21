@@ -2,6 +2,8 @@
 
 A basic text editor wrote in C++
 
+![screenshot and that](sceenshot.png)
+
 ## Installing
 
 `curl -s https://raw.githubusercontent.com/ActuallySandPotNoodles/mintedit/refs/heads/main/install.sh | sudo bash`
