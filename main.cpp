@@ -7,6 +7,8 @@
 								    something you can sue over btw ^^^ - but brent won't sue my over it
 even if it's just first names and that */
 
+// 21/11/2026 - big update, also my thoughts go in mintedit. cedia (not cedium - i don't play infra THAT much)
+
 #include "window.h"
 #include <QApplication>
 #include <QMainWindow>
@@ -118,7 +120,7 @@ public:
         QMessageBox msgBox(this);
         QPixmap apixmap("/usr/share/sandpotnoodles/mintedit.png");
         QPixmap pixmap = apixmap.scaled(150, 150, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-        msgBox.setText(QString::fromStdString("MintEdit Version "+version+"\nMade with ｌｕｃｋ by SandPotNoodles\nContributors:\nme"));
+        msgBox.setText(QString::fromStdString("MintEdit Version "+version+"\nMade with ｌｕｃｋ by SandPotNoodles\nContributors:\nme\n\nThis software means a lot to me."));
         msgBox.setIconPixmap(pixmap);
         msgBox.exec();
     }
@@ -133,10 +135,10 @@ public:
         string selection = ui.comboBox->currentText().toStdString();
         if (selection == "HTML") {
             cout << "HTML" << endl;
-            current_mdt = 0;
+            current_mdt = 1;
         } else {
             cout << "Markdown" << endl;
-            current_mdt = 1;
+            current_mdt = 0;
         }
         edit_event();
     }
