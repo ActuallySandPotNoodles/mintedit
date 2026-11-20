@@ -2,7 +2,7 @@
 
 A basic text editor wrote in C++
 
-![screenshot and that](sceenshot.png)
+![screenshot and that](ebk.png)
 
 ## Installing
 
