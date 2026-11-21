@@ -60,7 +60,7 @@ public:
         if (Form->objectName().isEmpty())
             Form->setObjectName("Form");
         Form->resize(886, 421);
-        Form->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(12, 12, 12, 255), stop:1 rgba(85, 85, 85, 255));"));
+        Form->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 rgba(12, 12, 12, 255), stop:1 rgba(85, 85, 85, 255));\ncolor: rgba(255, 255, 255, 255)"));
         gridLayout_2 = new QGridLayout(Form);
         gridLayout_2->setSpacing(0);
         gridLayout_2->setObjectName("gridLayout_2");
@@ -313,7 +313,7 @@ public:
 #if QT_CONFIG(shortcut)
         saveas->setShortcut(QCoreApplication::translate("Form", "Ctrl+Shift+S", nullptr));
 #endif // QT_CONFIG(shortcut)
-        infobutton->setText(QCoreApplication::translate("Form", "MintText", nullptr));
+        infobutton->setText(QCoreApplication::translate("Form", "MintEdit", nullptr));
         open->setText(QString());
 #if QT_CONFIG(shortcut)
         open->setShortcut(QCoreApplication::translate("Form", "Ctrl+O", nullptr));
